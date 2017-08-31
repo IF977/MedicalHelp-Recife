@@ -15,7 +15,7 @@ O MedicalHelp-Recife é uma aplicação SaaS que indica um hospital ao usuário 
 * Preferência do usuário por hospital particular ou público.
 
 ## Justificativa
-No ano de 2015, em Recife, houveram 70.011 solicitações de atendimento ao SAMU, destas, 43.477 não eram de urgência. Imagine quantas dessas pessoas chamaram o Serviço de Atendimento Médico de Urgência apenas por não saber para onde ir e como prosseguir. Nossa aplicação Web surge para solucionar esse problema, com o mapeamento das unidades de saúde mais próximas do usuário filtradas por suas necessidades, e ainda, ajuda a melhorar o fluxo dos atendimentos de urgência do SAMU, por criar uma plataforma alternativa para casos específicos.
+No ano de 2015, em Recife, houve 70.011 solicitações de atendimento ao SAMU, destas, 43.477 não eram de urgência. Imagine quantas dessas pessoas chamaram o Serviço de Atendimento Médico de Urgência apenas por não saber para onde ir e como prosseguir. Nossa aplicação Web surge para solucionar esse problema, com o mapeamento das unidades de saúde mais próximas do usuário filtradas por suas necessidades, e ainda, ajuda a melhorar o fluxo dos atendimentos de urgência do SAMU, por criar uma plataforma alternativa para casos específicos.
 
 Inicialmente a aplicação buscará hospitais em Recife e Região Metropolitana.
 
