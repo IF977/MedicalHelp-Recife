@@ -3,7 +3,7 @@ Projeto da disciplina (IF977) Engenharia de Software, do curso de graduação em
 
 ## Equipe:
 * Guilherme Menge: Desenvolvedor
-* Maria Eugênia: Desenvolvedora de Testes
+* Maria Eugênia: Desenvolvedora de Testes e Product Owner
 * Mateus Maciel: Gerente do Projeto e Desenvolvedor
 * Mariana Lima: Desenvolvedora
 
