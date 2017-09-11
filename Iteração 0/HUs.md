@@ -23,3 +23,11 @@ como paciente
 quero encontrar hospital que atenda plano de saúde
 
 para marcar consulta
+
+  ------------------------
+
+como testemunha de um acidente
+
+quero encontrar hospital mais próximo 
+
+para quem está ferido ser atendido com urgência
