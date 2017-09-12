@@ -10,15 +10,6 @@ para ir até lá e realizar tratamento
 
   ------------------------
   
-como usuário
-
-quero uma interface simples, objetiva e intuitiva
-
-para obter a saída de maneira rápida e sem muitas etapas
-
-
-  ------------------------
-  
 como vítima de acidente
 
 quero encontrar o hospital mais próximo que atenda emergência
