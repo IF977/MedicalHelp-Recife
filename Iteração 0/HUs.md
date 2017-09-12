@@ -6,7 +6,16 @@ como paciente
 
 quero encontrar o hospital mais próximo
 
-para realizar tratamento
+para ir até lá e realizar tratamento
+
+  ------------------------
+  
+como usuário
+
+quero uma interface simples, objetiva e intuitiva
+
+para obter a saída de maneira rápida e sem muitas etapas
+
 
   ------------------------
   
@@ -14,7 +23,7 @@ como vítima de acidente
 
 quero encontrar o hospital mais próximo que atenda emergência
 
-para ser atendido
+para ir até lá e ser atendido
 
   ------------------------
 
@@ -22,7 +31,7 @@ como paciente
 
 quero encontrar o hospital mais próximo que atenda plano de saúde
 
-para marcar consulta
+para ir até lá e me consultar
 
   ------------------------
 
@@ -30,4 +39,4 @@ como testemunha de um acidente
 
 quero encontrar o hospital mais próximo 
 
-para quem está ferido ser atendido com urgência
+para poder conduzir quem está ferido
