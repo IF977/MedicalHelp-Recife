@@ -4,7 +4,7 @@
   
 como paciente
 
-quero encontrar um hospital
+quero encontrar o hospital mais próximo
 
 para realizar tratamento
 
@@ -12,7 +12,7 @@ para realizar tratamento
   
 como vítima de acidente
 
-quero encontrar hospital próximo que atenda emergência
+quero encontrar o hospital mais próximo que atenda emergência
 
 para ser atendido
 
@@ -20,7 +20,7 @@ para ser atendido
 
 como paciente
 
-quero encontrar hospital que atenda plano de saúde
+quero encontrar o hospital mais próximo que atenda plano de saúde
 
 para marcar consulta
 
@@ -28,6 +28,6 @@ para marcar consulta
 
 como testemunha de um acidente
 
-quero encontrar hospital mais próximo 
+quero encontrar o hospital mais próximo 
 
 para quem está ferido ser atendido com urgência
