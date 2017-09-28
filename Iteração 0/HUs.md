@@ -31,3 +31,19 @@ como testemunha de um acidente
 quero encontrar o hospital mais próximo 
 
 para poder conduzir quem está ferido
+
+  ------------------------
+  
+como usuário da aplicação
+
+quero que seja retornado um mapa
+
+para encontrar o hospital facilmente
+
+  ------------------------
+  
+como usuário da aplicação
+
+quero fazer a consulta com um clique
+
+para obter o resultado de forma rápida
