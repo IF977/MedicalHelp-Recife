@@ -7,6 +7,9 @@ class HospitalsController < ApplicationController
     @hospitals = Hospital.all
   end
 
+  def busca_hospitais
+  end
+  
   # GET /hospitals/1
   # GET /hospitals/1.json
   def show
