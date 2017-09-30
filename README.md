@@ -8,10 +8,10 @@ Projeto da disciplina (IF977) Engenharia de Software, do curso de graduação em
 * Mariana Lima: Desenvolvedora
 
 ## Descrição
-O MedicalHelp-Recife é uma aplicação SaaS que indica um hospital ao usuário baseado em sua localização e algumas informações adicionais:
+O MedicalHelp-Recife é uma aplicação SaaS que indica hospitais ao usuário (vítima ou testemunha) baseado em sua localização e algumas informações adicionais:
 
-* Estado de saúde do usuário (emergência, consultas de rotina, etc.);
-* Se o usuário possui plano de saúde ou não;
+* Estado de saúde da vítima (emergência, consultas de rotina, etc.);
+* Se a vítima possui plano de saúde ou não;
 * Preferência do usuário por hospital particular ou público.
 
 ## Justificativa
