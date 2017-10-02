@@ -39,3 +39,11 @@ como usuário da aplicação
 quero fazer a consulta com um clique
 
 para obter o mapa rapidamente
+
+  ------------------------
+como usuário da aplicação
+
+quero que seja retornado um mapa
+
+para que eu possa navegar por ele
+
