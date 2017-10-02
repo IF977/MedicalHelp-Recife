@@ -1,5 +1,5 @@
 # MedicalHelp-Recife
-Projeto da disciplina (IF977) Engenharia de Software, do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE).
+Projeto da disciplina de Engenharia de Software (IF977), do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE).
 
 ## Equipe:
 * Guilherme Menge: Desenvolvedor
