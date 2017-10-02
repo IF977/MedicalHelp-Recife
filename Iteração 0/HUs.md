@@ -25,14 +25,6 @@ quero encontrar o hospital mais próximo que atenda plano de saúde
 para ir até lá e me consultar
 
   ------------------------
-
-como testemunha de um acidente
-
-quero encontrar o hospital mais próximo 
-
-para poder conduzir quem está ferido
-
-  ------------------------
   
 como usuário da aplicação
 
