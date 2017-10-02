@@ -38,4 +38,4 @@ como usuário da aplicação
 
 quero fazer a consulta com um clique
 
-para obter o resultado de forma rápida
+para obter o mapa
