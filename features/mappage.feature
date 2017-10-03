@@ -6,5 +6,5 @@ Feature: Navegabilidade do mapa
 
  Scenario: Visualizar um mapa navegável
   Given I am on the map page
-  When click on the map
+  When I click on the map
   Then I should navigate on it
