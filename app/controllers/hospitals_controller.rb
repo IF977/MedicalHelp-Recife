@@ -9,6 +9,9 @@ class HospitalsController < ApplicationController
 
   def busca_hospitais
   end
+
+  def showmap
+  end
   
   # GET /hospitals/1
   # GET /hospitals/1.json
