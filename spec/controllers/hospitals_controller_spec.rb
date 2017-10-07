@@ -138,4 +138,19 @@ RSpec.describe HospitalsController, type: :controller do
     end
   end
 
+  describe "GET #busca_hospitais" do
+    it "returns a success response" do
+      get :busca_hospitais
+      expect(response).to render_template("busca_hospitais")
+    end
+
+  end
+
+  describe "GET #showmap" do
+    it "returns a success response" do
+      get :showmap
+      expect(response).to render_template("showmap")
+    end
+  end
+
 end
