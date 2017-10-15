@@ -1,5 +1,5 @@
 #3DB2B2 ~verde
 
-#818183 ~cinza
+#818182 ~cinza
 
 #FDFCFC ~frostine/branco
