@@ -16,18 +16,26 @@
        }
        #back{
          position: absolute;
-         width: 100%;
+         width: 300px;
          bottom: 0;
+         left: 50%;
+         margin-left: -150px;
+         text-align: center;
+       }
+       #medicalhelp {
+         width: 150px;
        }
     </style>
   </head>
   <body>
     <div id="map" class="relative">
-      <a href="../">
-      </a>
     </div>
-    <div id="logo">< logo here ></div>
-    <div id="back">Voltar</div>
+    <div id="logo">
+      <img src="img/logo.png" id="medicalhelp"/>  
+    </div>
+    <a href="../">
+      <button id="back" class="btn btn-primary">Voltar</div>
+    </a>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
