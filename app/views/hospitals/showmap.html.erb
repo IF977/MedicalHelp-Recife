@@ -2,47 +2,42 @@
 <html>
   <head>
     <style>
-        a {
-          color: #FFF;
-        }
-        a:hover, a:visited, a:focus {
-          color: #FFF;]
-          text-decoration: none;
-          background: transparent;
-        }
-       #map {
-        height: 100vh;
-        width: 100%;
-       }
-       #logo {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        text-align: center;
-        background-color: white;
-       }
-       #back {
-        position: absolute;
-        max-width: 300px;
-        bottom: 30px;
-        left: 50%;
-        margin-left: -150px;
-        text-align: center;
-       }
-       #medicalhelp {
-         height: 18vh;
-       }
+    a {
+      color: #FFF;
+    }
+    a:hover, a:visited, a:focus {
+      color: #FFF;]
+      text-decoration: none;
+      background: transparent;
+    }
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+    #logo {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      background-color: white;
+    }
+    #back {
+      position: absolute;
+      max-width: 300px;
+      bottom: 30px;
+      left: 50%;
+      margin-left: -150px;
+      text-align: center;
+    }
+    #medicalhelp {
+       height: 18vh;
+    }
     </style>
   </head>
   <body>
     <div id="map" class="relative">
     </div>
-    <div id="logo">
-      <img src="img/logo.png" id="medicalhelp"/>  
-    </div>
-    <a href="../">
-      <button id="back" class="btn btn-primary">Voltar</div>
-    </a>
+    
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -77,5 +72,12 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3tOwxd4AhG7MSIB-suRz0ZqjiLlq3pTs&callback=initMap">
     </script>
+    
+    <div id="logo">
+      <img src="img/logo.png" id="medicalhelp"/>  
+    </div>
+    <a href="../">
+      <button id="back" class="btn btn-primary">Voltar</div>
+    </a>
   </body>
 </html>
