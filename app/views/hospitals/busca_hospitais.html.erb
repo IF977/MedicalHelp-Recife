@@ -1,6 +1,6 @@
 <div class="container">
     <div class="relative">
-        <img src="img/logo.png" class="img-responsive" style="margin: 0 auto; max-width: 360px;"/>  
+        <img src="img/logo.png" class="img-responsive" id="logo"/>  
     </div>
     <div class="button-box">
         <a href="/map">
@@ -9,11 +9,16 @@
     </div>
 </div>
 <style>
+    #logo {
+        width: 240px;
+        left: 50%;
+        margin-left: -120px;
+    }
     body {
         background-color: #333;
     }
     .button-box {
-        max-width: 300;
+        max-width: 300px;
         margin: 0 auto;
     }
     #searchButton {
