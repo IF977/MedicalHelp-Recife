@@ -7,10 +7,12 @@
         width: 100%;
        }
        #logo {
-         position: absolute;
-         top: 0;
-         width: 300px;
-         margin: 0 auto;
+        position: absolute;
+        top: 0;
+        width: 300px;
+        left: 50%;
+        margin-left: -150px;
+        text-align: center;
        }
        #back{
          position: absolute;
@@ -22,10 +24,10 @@
   <body>
     <div id="map" class="relative">
       <a href="../">
-        <div id="back">Voltar</div>
       </a>
     </div>
     <div id="logo">< logo here ></div>
+    <div id="back">Voltar</div>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
