@@ -47,3 +47,9 @@ quero que seja retornado um mapa
 
 para que eu possa navegar por ele
 
+  ------------------------
+como usuário da aplicação
+
+quero fazer a consulta com um clique
+
+para obter no mapa a região onde me encontro
