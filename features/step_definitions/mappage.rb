@@ -1,11 +1,12 @@
-Given("I am on the map page") do
+Given("I clicked on the buscar button") do
+  visit "/"
+  click_button("Buscar")
+end
+
+When("The page loads") do
   visit "/map"
 end
 
-When("click on the map") do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("I should navigate on it") do
-  visit "maps.google.com"
+Then("I should see the map") do
+  expect(page).to have_css '#map'
 end
