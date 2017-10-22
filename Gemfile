@@ -70,5 +70,5 @@ gem 'bootstrap', '~> 4.0.0.beta'
 gem 'jquery-rails'
 gem 'rails-controller-testing'
 
-require 'smarter_csv'
+gem 'smarter_csv'
 gem 'database_cleaner'
