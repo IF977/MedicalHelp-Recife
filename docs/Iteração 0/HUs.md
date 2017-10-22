@@ -53,3 +53,18 @@ como usuário da aplicação
 quero fazer a consulta com um clique
 
 para obter no mapa a região onde me encontro
+
+  ------------------------
+
+como usuário da aplicação
+
+quero clicar em "voltar" 
+
+para que eu possa retornar a página inicial
+
+  ------------------------
+como usuário da aplicação 
+
+quero ver um pin no mapa 
+
+para poder enxergar mais facilmente a localização
