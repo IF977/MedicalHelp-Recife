@@ -3,9 +3,9 @@ Given("I am on the map page") do
 end
 
 When("click on the voltar button") do
-   click_button(Voltar)
+   click_button("Voltar")
 end
 
-Then("Then I should go back to the homepage") do
+Then("I should go back to the homepage") do
   visit "/"
 end
