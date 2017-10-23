@@ -8,6 +8,7 @@ class HospitalsController < ApplicationController
   end
 
   def busca_hospitais
+    @hospitals = Hospital.where(:co_municipio_gestor, 261160)
   end
 
   def showmap
