@@ -34,6 +34,7 @@ Período: 10/10 - 23/10
 * Ajustes necessários no front end - Guilherme Menge
 * Testes para localização e marcadores gmaps - Maria Eugênia
 * Testes rspec marcadores mapa - Mateus Maciel
+* Modelo ER - Mariana Lima e Maria Eugênia
 
 ## Lições aprendidas
 * Não acumular atividades
