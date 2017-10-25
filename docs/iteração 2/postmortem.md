@@ -21,7 +21,7 @@ Período: 10/10 - 23/10
 * Criar tabela e colunas no banco de dados - Mariana Lima
 * Front end da tela inicial - Guilherme Menge
 * Front end para tela do mapa - Guilherme Menge
-* Atualizaço das HUs - Maria Eugênia
+* Atualização das HUs - Maria Eugênia
 
 ## O que não foi feito?
 * Teste rspec model
@@ -29,7 +29,7 @@ Período: 10/10 - 23/10
 ## O que está planejado para a próxima iteração?  
 * Fazer layout dos marcadores - Maria Eugênia
 * Adicionar latitudes e longitudes com geocoding - Mariana Lima
-* Atulizar banco de dados com latitudes e longitudes - Mariana Lima
+* Atualizar banco de dados com latitudes e longitudes - Mariana Lima
 * Adicionar marcadores nos hospitais - Guilherme Menge e Mateus Maciel
 * Ajustes necessários no front end - Guilherme Menge
 * Testes para localização e marcadores gmaps - Maria Eugênia
