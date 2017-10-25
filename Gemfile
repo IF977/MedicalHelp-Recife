@@ -72,3 +72,4 @@ gem 'rails-controller-testing'
 
 gem 'smarter_csv'
 gem 'database_cleaner'
+gem 'rack-ssl-enforcer'
