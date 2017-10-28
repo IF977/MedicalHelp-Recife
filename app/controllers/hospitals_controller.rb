@@ -4,10 +4,11 @@ class HospitalsController < ApplicationController
   # GET /hospitals
   # GET /hospitals.json
   def index
-    @hospitals = Hospital.all
+    @hospitals = Hospital.where("co_municipio_gestor = '261160'")
   end
 
   def busca_hospitais
+    @hospitals = Hospital.where("co_municipio_gestor = 261160")
   end
 
   def showmap
