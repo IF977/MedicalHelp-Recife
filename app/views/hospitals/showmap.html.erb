@@ -42,7 +42,7 @@
   <body>
     <div id="map" class="relative">
     </div>
-    
+
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -65,6 +65,18 @@
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
+
+        "<% @hospitals.each do |hospital| %>"
+          var coordenadas = new google.maps.LatLng("<%= hospital.nu_latitude %>" ,"<%= hospital.nu_longitude %>");
+          //window.alert("<%= @hospitals.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            title: "<%= hospital.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
       }
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
@@ -77,7 +89,7 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3tOwxd4AhG7MSIB-suRz0ZqjiLlq3pTs&callback=initMap">
     </script>
     <div id="logo">
-      <img src="img/logo.png" id="medicalhelp"/>  
+      <img src="img/logo.png" id="medicalhelp"/>
     </div>
     <div class="bottom">
       <a href="../">
