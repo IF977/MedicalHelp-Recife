@@ -4,7 +4,7 @@ RSpec.describe "hospitals/busca_hospitais", type: :view do
   it 'shows a button' do
     render
 
-    expect(rendered).to have_selector ("#searchButton")
+    expect(rendered).to have_selector ("#search")
   end
 
   it 'shows the logo' do
