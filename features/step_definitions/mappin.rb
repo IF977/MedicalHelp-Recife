@@ -3,5 +3,5 @@ Given("I am on the mappage") do
 end
 
 Then("I should see a pin on the map") do
-  expect(page).to have_css '#marker'
+  expect(page).to have_xpath "//script[contains(., marker)]", visible: false
 end
