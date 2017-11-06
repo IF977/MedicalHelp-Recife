@@ -68,3 +68,11 @@ como usuário da aplicação
 quero ver um pin no mapa 
 
 para poder enxergar mais facilmente a localização
+
+------------------------
+como usuário
+
+quero ver o centro no mapa aproximadamente na minha localização atual
+
+para ter uma visão global dos hospitais perto de mim
+
