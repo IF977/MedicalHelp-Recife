@@ -8,7 +8,7 @@ Scenario: Centering the map on user location
     And I have allowed access to my GPS location
     Then the center of the map should be approximately on my current location
 
-Scenario: Centering the map on user location  
+Scenario: Not centering the map on user location  
     Given I am on the map page
     And I have not allowed access to my GPS location 
     Then the center of the map should be approximately on the default location
