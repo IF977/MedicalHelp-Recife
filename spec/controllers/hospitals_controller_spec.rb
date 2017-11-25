@@ -44,18 +44,26 @@ RSpec.describe HospitalsController, type: :controller do
 
 
   describe "GET #busca_hospitais" do
-    it "returns a success response" do
-      get :busca_hospitais
-      expect(response).to render_template("busca_hospitais")
+    subject {get :busca_hospitais}
+
+    it "renders the homepage" do
+      expect(subject).to render_template("busca_hospitais")
     end
 
+    it 'does not render a diferent template' do
+      expect(subject).to_not render_template("showmap")
+    end
   end
 
   describe "GET #showmap" do
-    it "returns a success response" do
-      get :showmap
-      expect(response).to render_template("showmap")
+    subject {get :showmap}
+
+    it "renders the map page" do
+      expect(subject).to render_template("showmap")
+    end
+
+    it 'does not render a diferent template' do
+      expect(subject).to_not render_template("busca_hospitais")
     end
   end
-
 end
