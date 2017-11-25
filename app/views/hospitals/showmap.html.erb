@@ -49,6 +49,45 @@
           zoom: 15,
           center: {lat: -8.05428, lng: -34.8813},
         });
+
+        var icons = {
+          clin: {
+            icon: {
+            size: new google.maps.Size(20, 20),
+            scaledSize: new google.maps.Size(20, 20),
+            url:"img/pin_hospitais.png"
+          }
+          },
+          cons: {
+            icon: {
+            size: new google.maps.Size(20, 20),
+            scaledSize: new google.maps.Size(20, 20),
+            url:"img/pin_hospitais.png"
+          }
+        },
+          unid: {
+            icon: {
+            size: new google.maps.Size(20, 20),
+            scaledSize: new google.maps.Size(20, 20),
+            url:"img/pin_hospitais.png"
+          }
+        },
+          hosp: {
+            icon: {
+            size: new google.maps.Size(20, 20),
+            scaledSize: new google.maps.Size(20, 20),
+            url:"img/pin_hospitais.png"
+          }
+        },
+          acad: {
+            icon: {
+            size: new google.maps.Size(20, 20),
+            scaledSize: new google.maps.Size(20, 20),
+            url:"img/pin_user.png"
+          }
+          }
+        };
+
         //var infoWindow = new google.maps.InfoWindow({map: map});
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
@@ -66,12 +105,61 @@
           handleLocationError(false, infoWindow, map.getCenter());
         }
 
+        "<% @consultorios.each do |consultorio| %>"
+          var coordenadas = new google.maps.LatLng("<%= consultorio.nu_latitude %>" ,"<%= consultorio.nu_longitude %>");
+          //window.alert("<%= @consultorios.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.cons.icon,
+            title: "<%= consultorio.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
+        "<% @clinicas.each do |clinica| %>"
+          var coordenadas = new google.maps.LatLng("<%= clinica.nu_latitude %>" ,"<%= clinica.nu_longitude %>");
+          //window.alert("<%= @clinicas.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.clin.icon,
+            title: "<%= clinica.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
+        "<% @unidades_basicas.each do |unidades_basica| %>"
+          var coordenadas = new google.maps.LatLng("<%= unidades_basica.nu_latitude %>" ,"<%= unidades_basica.nu_longitude %>");
+          //window.alert("<%= @unidades_basicas.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.unid.icon,
+            title: "<%= unidades_basica.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
+        "<% @academias.each do |academia| %>"
+          var coordenadas = new google.maps.LatLng("<%= academia.nu_latitude %>" ,"<%= academia.nu_longitude %>");
+          //window.alert("<%= @academias.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.acad.icon,
+            title: "<%= academia.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
         "<% @hospitals.each do |hospital| %>"
           var coordenadas = new google.maps.LatLng("<%= hospital.nu_latitude %>" ,"<%= hospital.nu_longitude %>");
           //window.alert("<%= @hospitals.length %>");
           var marker = new google.maps.Marker({
             position: coordenadas,
             //map: map
+            icon: icons.hosp.icon,
             title: "<%= hospital.no_fantasia %>"
           });
           marker.setMap(map);
