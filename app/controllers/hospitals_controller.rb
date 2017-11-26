@@ -12,7 +12,11 @@ class HospitalsController < ApplicationController
   end
 
   def showmap
-    @hospitals = Hospital.where("co_municipio_gestor = '261160'")
+    @centrossaude = Hospital.where(["co_municipio_gestor = ? and co_tipo_unidade = ?", "261160", "2"])
+    @consultorios = Hospital.where(["co_municipio_gestor = ? and co_tipo_unidade = ?", "261160", "22"])
+    @clinicas = Hospital.where(["co_municipio_gestor = ? and co_tipo_unidade = ?", "261160", "36"])
+    @hospgerais = Hospital.where(["co_municipio_gestor = ? and co_tipo_unidade = ?", "261160", "5"])
+    @hospespecializados = Hospital.where(["co_municipio_gestor = ? and co_tipo_unidade = ?", "261160", "7"])
   end
   
   # GET /hospitals/1
