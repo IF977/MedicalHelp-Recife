@@ -79,7 +79,6 @@
 
         "<% @consultorios.each do |consultorio| %>"
           var coordenadas = new google.maps.LatLng("<%= consultorio.nu_latitude %>" ,"<%= consultorio.nu_longitude %>");
-          //window.alert("<%= @consultorios.length %>");
           var marker = new google.maps.Marker({
             position: coordenadas,
             //map: map
@@ -91,7 +90,6 @@
 
         "<% @clinicas.each do |clinica| %>"
           var coordenadas = new google.maps.LatLng("<%= clinica.nu_latitude %>" ,"<%= clinica.nu_longitude %>");
-          //window.alert("<%= @clinicas.length %>");
           var marker = new google.maps.Marker({
             position: coordenadas,
             //map: map
@@ -103,7 +101,6 @@
 
         "<% @centrossaude.each do |centro| %>"
           var coordenadas = new google.maps.LatLng("<%= centro.nu_latitude %>" ,"<%= centro.nu_longitude %>");
-          //window.alert("<%= @centros.length %>");
           var marker = new google.maps.Marker({
             position: coordenadas,
             //map: map
@@ -115,7 +112,6 @@
 
         "<% @hospgerais.each do |hospg| %>"
           var coordenadas = new google.maps.LatLng("<%= hospg.nu_latitude %>" ,"<%= hospg.nu_longitude %>");
-          //window.alert("<%= @hospgs.length %>");
           var marker = new google.maps.Marker({
             position: coordenadas,
             //map: map
@@ -127,7 +123,6 @@
 
         "<% @hospespecializados.each do |hospe| %>"
           var coordenadas = new google.maps.LatLng("<%= hospe.nu_latitude %>" ,"<%= hospe.nu_longitude %>");
-          //window.alert("<%= @hospes.length %>");
           var marker = new google.maps.Marker({
             position: coordenadas,
             //map: map
