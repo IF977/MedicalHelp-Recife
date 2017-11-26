@@ -49,6 +49,17 @@
           zoom: 15,
           center: {lat: -8.05428, lng: -34.8813},
         });
+
+        var icons = {
+          hosp: {
+            icon: {
+            size: new google.maps.Size(20, 20),
+            scaledSize: new google.maps.Size(20, 20),
+            url:"img/pin_user.png"
+          }
+          }
+        };
+
         //var infoWindow = new google.maps.InfoWindow({map: map});
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
@@ -66,13 +77,62 @@
           handleLocationError(false, infoWindow, map.getCenter());
         }
 
-        "<% @hospitals.each do |hospital| %>"
-          var coordenadas = new google.maps.LatLng("<%= hospital.nu_latitude %>" ,"<%= hospital.nu_longitude %>");
-          //window.alert("<%= @hospitals.length %>");
+        "<% @consultorios.each do |consultorio| %>"
+          var coordenadas = new google.maps.LatLng("<%= consultorio.nu_latitude %>" ,"<%= consultorio.nu_longitude %>");
+          //window.alert("<%= @consultorios.length %>");
           var marker = new google.maps.Marker({
             position: coordenadas,
             //map: map
-            title: "<%= hospital.no_fantasia %>"
+            icon: icons.hosp.icon,
+            title: "<%= consultorio.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
+        "<% @clinicas.each do |clinica| %>"
+          var coordenadas = new google.maps.LatLng("<%= clinica.nu_latitude %>" ,"<%= clinica.nu_longitude %>");
+          //window.alert("<%= @clinicas.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.hosp.icon,
+            title: "<%= clinica.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
+        "<% @centrossaude.each do |centro| %>"
+          var coordenadas = new google.maps.LatLng("<%= centro.nu_latitude %>" ,"<%= centro.nu_longitude %>");
+          //window.alert("<%= @centros.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.hosp.icon,
+            title: "<%= centro.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
+        "<% @hospgerais.each do |hospg| %>"
+          var coordenadas = new google.maps.LatLng("<%= hospg.nu_latitude %>" ,"<%= hospg.nu_longitude %>");
+          //window.alert("<%= @hospgs.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.hosp.icon,
+            title: "<%= hospg.no_fantasia %>"
+          });
+          marker.setMap(map);
+        "<% end %>"
+
+        "<% @hospespecializados.each do |hospe| %>"
+          var coordenadas = new google.maps.LatLng("<%= hospe.nu_latitude %>" ,"<%= hospe.nu_longitude %>");
+          //window.alert("<%= @hospes.length %>");
+          var marker = new google.maps.Marker({
+            position: coordenadas,
+            //map: map
+            icon: icons.hosp.icon,
+            title: "<%= hospe.no_fantasia %>"
           });
           marker.setMap(map);
         "<% end %>"
