@@ -1,6 +1,7 @@
 # MedicalHelp-Recife
 Projeto da disciplina de Engenharia de Software (IF977), do curso de graduação em Sistemas de Informação do Centro de Informática da Universidade Federal de Pernambuco (UFPE).
 Link da aplicação no Heroku: http://medicalhelp-recife.herokuapp.com/
+Link para o screencast da aplicação: https://collaaj.com/Video/VideoPlayback?vid=bbd7211f-9dd2-4d36-96c8-b441a18ed233
 
 ## Equipe:
 * Guilherme Menge: Desenvolvedor
