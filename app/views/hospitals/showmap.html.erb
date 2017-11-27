@@ -49,6 +49,19 @@
           zoom: 15,
           center: {lat: -8.05428, lng: -34.8813},
         });
+        
+        map.addListener('center_changed', function() {
+          // 3 seconds after the center of the map has changed, pan back to the
+          // marker.
+          window.setTimeout(function() {
+            map.panTo(marker.getPosition());
+          }, 3000);
+        });
+
+        marker.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker.getPosition());
+        });
 
         var icons = {
           consult_u: {
@@ -159,19 +172,6 @@
           });
           marker.setMap(map);
         "<% end %>"
-        
-        map.addListener('center_changed', function() {
-          // 3 seconds after the center of the map has changed, pan back to the
-          // marker.
-          window.setTimeout(function() {
-            map.panTo(marker.getPosition());
-          }, 3000);
-        });
-
-        marker.addListener('click', function() {
-          map.setZoom(8);
-          map.setCenter(marker.getPosition());
-        });
 
       }
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
