@@ -1,0 +1,194 @@
+==============================================================
+=	      === Heroku == DEPLOY == Heroku ===	     =
+==============================================================
+= 		PostgreSQL Setup on Cloud9 IDE		     =
+==============================================================
+### Check PostreSQL version:
+pg_config --version
+psql --version
+
+
+# Start the PostgreSQL service:
+sudo service postgresql start
+
+sudo service postgresql restart	# restartar o service do PG
+
+
+# Connect to the service:
+psql
+
+#			----- rake db:create:all -----				  #
+		# vai criar tudo que há no config/database.yml
+
+# Criar/Create database:
+CREATE DATABASE "safesim";	# precisa do ponto-e-vírgula,
+CREATE DATABASE testdb;		# já das aspas não necessariamente.
+
+
+# Listar as databases:		# (por padrão tem-se 2 templates e 1 psgres)
+\list				# ou apenas: \l
+
+
+# Switch/Mudar para a db que você quer/criou:
+\connect safesim		# ou: \c safesim	# ou, antes: psql <db-name>
+
+
+# Listar as tabelas do banco/listing tables:
+\dt				# \d, \dt, \ds Lista tables/views/etc.
+
+
+# Deletar/Drop database
+DROP DATABASE testdb;		# precisa do ponto-e-vírgula.
+
+
+# Quit/Sair do psql:
+\q				# ou Ctrl + D
+
+
+==============================================================
+### Change the file config/database.yml to:
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: safesim
+  username: ubuntu
+  password: password
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: safesim
+  username: ubuntu
+  password: password 
+
+
+==============================================================
+### Run some bundles, rake migrate & testar a app localmente:
+bundle
+bundle install
+bundle update
+
+rake db:migrate
+
+
+==============================================================
+### Deploy to Heroku:
+
+-> Criar um novo app no Heroku e associar o Deployment Method ao repo Github
+   (é sem dúvida o melhor método, acredite).
+
+-> Enable Automatic deploys a uma branch (pode ser a master se quiser)
+   (depois de commitar e pushar uma mudança, o app vai subir pro Heroku)
+
+==========
+se o Heroku der algum erro de build/etc (ver no overview log do app no Heroku.com):
+   atente para a mensagem de erro. [o caso que encontro mostra necessidade de precompile assets]
+
+   logo, neste meu caso, eu googled e a resposta é:
+   rake assets:precompile		# e commitar os assets pré-compilados.
+==========
+
+Por fim, quando rodar a app e testá-lo; será necessário rodar o rake db:migrate p/ criar tabelas
+
+heroku run rake db:migrate -a <heroku-app-name>
+
+
+	[FINAL FELIZ!]
+	    [FIM]
+
+
+==============================================================
+{Fonte: }
+
+Googled por: "setting up postgres in c9"
+E fui no primeiro link:
+
+https://community.c9.io/t/setting-up-postgresql/1573
+
+==============================================================
+
+
+
+
+
+
+### Rails EXTRAs:
+
+
+
+# Create new rails app (at the current folder ".") with PG already.
+rails new . --database=postgresql
+
+# Create all databases informed in config/database.yml:
+rake db:create:all
+
+Fonte: http://jacopretorius.net/2014/02/all-rails-db-rake-tasks-and-what-they-do.html
+
+
+
+
+
+
+# Estrutura/Modelo do arquivo config/database.yml to:
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_development
+  pool: 5
+  username: myapp
+  password: password1
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: myapp_test
+  pool: 5
+  username: myapp
+  password: password1
+
+#			----- MELHOR PRÁTICA: -----
+
+default: &default
+  adapter: postgresql
+  encoding: SQL_ASCII
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: safesim_development
+
+test:
+  <<: *default
+  database: safesim_test
+
+production:
+  <<: *default
+  database: safesim_production
+
+
+
+
+
+
+
+==============================================================
+ps.	(não foi necessário)
+
+# Set a password for your postgres user:
+\password postgres
+
+pps.	(não foi necessário)
+
+Para Instalar o PostgreS no Ubuntu:
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+
+Para config o super User
+sudo -u postgres createuser -rds fnando
+
+createdb $USER
+
+==============================================================

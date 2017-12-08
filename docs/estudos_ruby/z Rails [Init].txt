@@ -1,0 +1,228 @@
+==============================================================
+=		System Info: Kernel, OS, Distro:	     =
+==============================================================
+echo; uname -s; uname -m; uname -o; uname -a; echo; lsb_release -a; echo;
+
+==============================================================
+=	Full apt-get update/clean/upgrade/dist-upgrade:	     =
+==============================================================
+
+apt-get update              ============================================
+apt-get upgrade -y          #           Bash Shell Navigation:         #
+                            #                                          #
+apt-get dist-upgrade -y     # ls -la => list all files (also hidden -a)#
+apt-get autoremove          # pwd    => print current folder           #
+apt-get autoclean           # cd ..  => go up for the parent folder    #
+apt-get update              ============================================
+
+
+sudo su
+sudo apt-get update; sudo apt-get upgrade -y; sudo apt-get dist-upgrade -y
+sudo apt-get update; sudo apt-get autoremove -y; sudo apt-get autoclean -y
+
+sudo apt update; sudo apt upgrade -y; sudo apt full-upgrade -y
+
+
+===================================================================================
+=			     ~~~~~ Ruby On Rails ~~~~~				  =
+===================================================================================
+==> Git latest version			# git-scm.com/downloads/
+git --version				# if not updated, then:
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install git -y		# check git --version again
+
+===================================================================================
+==> Ruby latest version (2.3.4):	# ruby-lang.org/en/downloads/
+ruby -v					# check latest stable Ruby version
+
+==> RVM latest version:
+rvm -v					# maybe'll need cmd: "/bin/bash --login" (if bash error)
+rvm get stable --autolibs=enable	# updates to latest stable rvm # check latest https://rvm.io/blog
+rvm get stable --auto
+
+rvm list known
+rvm install ruby-2.3.4			# install latest stable Ruby version
+rvm use ruby-2.3.4 --default		# use V2.3.4 as default
+
+rvm gemset list				# check gemsets. use default or global
+rvm gemset use global			# global seeds to all gemsets; Update it.
+
+echo; ruby -v; rvm -v; rvm gemset list
+
+==> RubyGems latest version:		# rubygems.org/pages/download/
+gem -v
+gem update --system			# update-upgrade to latest Ruby gem manager
+
+	--- To avoid downloading and installing gem's documentation: ---
+cat ~/.gemrc			# if without, add:
+
+echo "" >> ~/.gemrc && echo "gem: --no-document" >> ~/.gemrc
+cat ~/.gemrc			# --no-document == --no-rdoc --no-ri
+
+-----------------------
+-  as rule of thumb   -
+-----------------------
+rvm -v					# check if appears (latest)
+rvm gemset list
+rvm gemset use global			# updates/install all gems in all gemsets
+
+gem outdated				# check outdated gems and updates them
+gem update
+-----------------------
+
+==> Bundler Gem latest version:		# bundler.io/whats_new
+gem list				# list gems and its' versions
+gem install bundler			# == gem update bundler
+bundler -v
+
+==> Node.JS:				# nodejs.org && docs.npmjs.com	# Rails needs Node.js
+npm install -g npm stable		# att npm(Node Package Manager) to latest stable
+npm -v                             	# docs.npmjs.com/ # stable version of npm is ...
+npm install -g n			# install n package to att Node.JS properly said
+n --lts
+sudo n lts				# output latest // install latest LTS Node.js
+node -v                         	# Cloud9 IDE doesn't allow latest node. Don't fight C9 =]
+
+===================================================================================
+=			     	~~~~~ RAILS ~~~~~				  =
+===================================================================================
+==> Rails latest version (5.1.1):	# rubyonrails.org/
+gem install rails			# gem 'rails' (in the .Gemfile)
+rails -v
+
+rails new . -d postgresql		# creates a new Rails App on current folder
+bundle install
+bundle update				# updates to latest .Gemfile gems versions
+bundle					# bundle == bundle install (it is the default action)
+
+==> PostgreSQL				# PostgreSQL is fundamental and quintessencial.
+gem install pg
+
+==> SQLite3 latest version:		# (PostgreSQL is the best 1; SQLite3 is the 2nd)
+gem install sqlite3			# gem 'sqlite3' (in the .Gemfile)
+
+In config/database.yml, make sure to use:
+  adapter: postgresql
+
+===================================================================================
+==> Quick "smoke test" / Teste de fogo:
+rake -T
+rake about				# create what you want, "rake db:migrate" & be happy!
+
+(Server erro: sudo /etc/init.d/apache2 stop)
+
+echo; uname -s; uname -m; uname -o; uname -a; echo; lsb_release -a; echo; rvm -v; bundler -v; echo RubyGems version:; gem -v; echo; ruby -v; rails -v; echo
+
+===================================================================================
+
+# PostgreSQL Run:
+sudo service postgresql start
+
+sudo service postgresql restart
+
+===================================================================================
+         Step-by-step To-Do command list on new Cloud9 Workspaces (c9.io)
+===================================================================================
+=                          ~~~~~ SUMMARY / RESUMO ~~~~~                           =
+===================================================================================
+=     LINUX      =
+==================
+echo; uname -s; uname -m; uname -o; uname -a; echo; lsb_release -a; echo
+
+sudo apt-get update -y; sudo apt-get upgrade -y; sudo apt-get dist-upgrade -y
+sudo apt-get update -y; sudo apt-get autoremove -y; sudo apt-get autoclean -y
+
+sudo apt update; sudo apt upgrade -y; sudo apt full-upgrade -y
+
+git --version
+
+ruby -v
+rvm get stable --autolibs=enable
+
+rvm install ruby-2.3.4
+rvm use ruby-2.3.4 --default
+
+rvm gemset list
+rvm gemset use global
+
+echo; ruby -v; rvm -v; rvm gemset list
+
+gem -v
+gem update --system
+
+cat ~/.gemrc			# if without, add:
+echo "" >> ~/.gemrc && echo "gem: --no-document" >> ~/.gemrc
+
+cat ~/.gemrc			# --no-document == --no-rdoc --no-ri
+
+gem outdated
+gem update
+
+==================
+=     RAILS      =
+==================
+gem install bundler
+bundler -v
+
+gem install rails
+rails -v
+
+gem install pg
+
+rails new . -d postgresql
+
+bundle install
+bundle update
+bundle
+
+==================
+Fire Test:
+==================
+rake -T
+rake about
+
+==================
+Applicaton Tests:
+==================
+Add to Gemfile:
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.6'
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
+rails generate cucumber:install
+rails generate rspec:install
+
+Scaffolds will generate basic tests
+
+==> Runninng Tests:
+rake    #all tests
+rake cucumber    #cucumber tests
+rake spec    #rspec tests
+
+==================
+Rails with ssl
+==================
+Add to Gemfile:
+gem 'rack-ssl-enforcer'    #rack-ssl-enforcer gem will force all requests to https
+
+==> Create a self signed ssl certificate:
+mkdir ~/.ssl
+# It'll ask you for address data and you can specify what you like but for *Common Name* use: "localhost.ssl"
+openssl req -new -newkey rsa:2048 -sha1 -days 365 -nodes -x509 -keyout ~/.ssl/localhost.key -out ~/.ssl/localhost.crt
+
+==> Run server:
+puma -b 'ssl://127.0.0.1:3000?key=~/.ssl/localhost.key&cert=~/.ssl/localhost.crt'
+
+==================
+Final Check:
+==================
+echo; ruby -v; rvm -v; rvm gemset list
+
+echo; uname -s; uname -m; uname -o; uname -a; echo; lsb_release -a; echo; rvm -v; ruby -v; rails -v; echo
+
+echo; uname -s; uname -m; uname -o; uname -a; echo; lsb_release -a; echo; rvm -v; bundler -v; echo RubyGems version:; gem -v; echo; ruby -v; rails -v; echo
+===================================================================================
