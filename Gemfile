@@ -68,7 +68,7 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'rails-controller-testing'
 
