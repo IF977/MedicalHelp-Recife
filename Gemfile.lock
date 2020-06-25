@@ -133,7 +133,7 @@ GEM
     popper_js (1.16.0)
     public_suffix (3.0.0)
     puma (3.12.6)
-    rack (2.0.8)
+    rack (2.2.3)
     rack-ssl-enforcer (0.2.9)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
